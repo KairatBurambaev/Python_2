@@ -1,10 +1,9 @@
 def inputlistN(inputlistN):
-    boolean = True
-    while boolean:
+    while True:
         try:
             Num = int(input(F'{inputlistN}'))
             Num = list(range(-Num,Num+1))
-            boolean = False
+            return Num
         except ValueError:
             print('Введите число!')
     return Num

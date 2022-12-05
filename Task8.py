@@ -1,9 +1,8 @@
 def inputN(inputN):
-    boolean = True
-    while boolean:
+    while True:
         try:
             Num = int(input(F"{inputN}"))
-            boolean = False
+            return Num
         except ValueError:
             print("Введите число!")
     return Num

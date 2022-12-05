@@ -1,10 +1,9 @@
 import math
 def inputNum(numb):
-    boolean = True
-    while boolean:
+    while True:
         try:
             number = float(input(F"{numb}"))
-            boolean = False
+            return number
         except ValueError:
             print("Введите число!")
     return number
