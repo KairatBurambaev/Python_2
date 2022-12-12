@@ -1,19 +1,16 @@
-import math
 def inputNum(numb):
     while True:
         try:
-            number = float(input(F"{numb}"))
-            return number
+            num = float(input(numb))
+            return num
         except ValueError:
             print("Введите число!")
-    return number
+
 num = inputNum("Введите число: ")
-length = len(str(num))
-numcel = math.floor(num)
-length1 = len(str(numcel))
-num = round(num * 10 ** (length - length1 - 1))
-summ = 0
-while (num != 0):
-    summ = summ + num % 10
-    num = num // 10
-print("Сумма цифр числа равна: ", int(summ))
+res = 0
+
+for i in str(num):
+    if i != '.':
+        res = res + int(i)
+
+print("Сумма цифр числа равна: ", res)

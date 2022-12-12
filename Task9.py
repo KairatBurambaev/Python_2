@@ -1,22 +1,25 @@
 def inputlistN(inputlistN):
     while True:
         try:
-            Num = int(input(F'{inputlistN}'))
-            Num = list(range(-Num,Num+1))
-            return Num
+            num = int(input(inputlistN))
+            num = list(range(-num,num+1))
+            return num
         except ValueError:
             print('Введите число!')
-    return Num
+
 index = open('file.txt', 'r')
 N = inputlistN('Введите N: ')
-list_var = []
+position = []
 result = 0
+
 for i in index:
     if i != ' ':
         i = int(i)
-        list_var.append(i)
+        position.append(i)
 index.close()
+
 #import random #(для перемешивания списка)
 #random.shuffle(N) #(для перемешивания списка)
-result = N[list_var[0]] * N[list_var[1]]
-print('Список: ',N,'\nпозиции из file.txt: ',list_var,'\nПроизведение: ',result)
+
+result = N[position[0]] * N[position[1]]
+print('Список: ',N,'\nпозиции из file.txt: ',position,'\nПроизведение: ',result)
