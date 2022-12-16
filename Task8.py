@@ -8,9 +8,8 @@ def inputN(inputN):
 
 num = inputN("Введите N: ")
 
-def fu(i):
-    return (1+1/i)**i
+fu = lambda x: (1+1/x)**x
 
-new_list = [fu(i) for i in range(1, num+1)]
+new_list = list(map(fu,[i for i in range(1, num+1)]))
 
 print(f"{num}: {(new_list)}")
